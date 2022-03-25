@@ -1,0 +1,48 @@
+public class Circles
+{public double radius;
+ public Circles()
+ {setRadius(2.0);}
+ public void setRadius( double r ) 
+{radius =r;}
+public double getRadius() 
+ { return radius; }
+ public double area() 
+ {return Math.PI * radius * radius;}
+}
+public class Cylinder extends Circles 
+{
+ public double height;
+  
+public Cylinder()
+ {
+
+  
+  super();
+setHeight(2.0);
+  
+}
+public void setHeight(double h)  
+ { height =h; }
+public double getHeight() 
+ { return height; }
+
+ public double area() 
+ {
+  return 2 * super.area() + 
+     2 * Math.PI * radius * height;}
+ public double areaCircle()
+{return super.area();}
+ public double getvolume() 
+  { return super.area() * height; }
+  public static void main(String[] args)
+{ Cylinder c=new Cylinder();
+  double m=c.area();
+  double n=c.getvolume();
+  double p=c.areaCircle();
+System.out.println("The area of Cylinder is "+m);
+System.out.println("The volume of Cylinder is "+n);
+System.out.println("The area of circle is:"+p);
+} 
+}  
+  
+
